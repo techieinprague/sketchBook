@@ -1,0 +1,177 @@
+/* Center all elements & bg cover */
+body{
+    text-align: center;
+    background : url(images/cover.jpg) center center fixed ;
+    background-size: cover;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+@font-face{
+    font-family: brownie;
+    src: url(images/BROWNIE\ BUSTER.ttf);
+}
+/*---title---*/
+
+
+h2{
+    height: 80px;
+    width: auto;
+    font-size: 3em;
+    margin: 10px auto;
+    color: black;
+    line-height: 2em;
+    font-weight: bold;
+    font-family: brownie , monospace;
+    
+}
+/*---input container---*/
+.inputContainer{
+    width: 200px;
+    margin: 0 auto;
+}
+/*----color input, line thickness, slider----*/
+.input{
+    height: 30px;
+    padding: 5px;
+    font-size: 0.8em;
+}
+#thicknessInput{
+    position: relative;
+}
+#circle{
+    height: 3px;
+    width: 3px;
+    border-radius: 100%;
+    background-color: black;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+}
+/*----canvas container----*/
+#canvasContainer{
+    height: 411px;
+    width: 611px;
+    margin: 10px auto;
+}
+#paint{
+    background-color: #E6E4E8;
+    /* background-color: yellow; */
+    cursor: crosshair;
+    height: 410px;
+    width: 600px;
+    position: relative;
+    right: 3px;
+    bottom: 5px;
+}
+
+/*----buttons----*/
+#buttonContainer{
+    width: 399px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+/*----Erase, save, reset----*/
+.input2{
+    width: 133px;
+    color: blue;
+    font-size: 1.3em;
+    float: left;
+    
+}
+.button{
+    /* padding: 10px; */
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    /* box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.5); */
+    position: relative;
+    border: none;
+
+    /* --Glassmorphism-- */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 5px 32px 0 rgba(117, 113, 117, 0.3);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+  
+}
+#erase{
+    color: rgb(25, 25, 139);
+}
+#reset{
+    color: red
+}
+#save{
+    color: green;
+}
+#erase:hover{
+    color: whitesmoke;
+}
+#save:hover{
+    color: whitesmoke;
+} 
+#reset:hover{
+    color: whitesmoke;
+} 
+.button:active{
+    top: 4px;
+}
+.eraseMode{
+    background-color: red;
+    color: whitesmoke;
+} 
+
+/* ----for smaller screens ------- */
+@media (max-width: 400px){
+    .inputContainer{
+        margin-top: 20px;
+    }
+    #canvasContainer{
+        height: 400px;
+        width: 450px;
+    }
+    #paint{
+        margin-top: 30px;
+        height: 375px;
+        width: 375px;
+        margin-right: 100px;
+    }
+    #buttonContainer{
+        position: relative;
+        top: 80px;
+        right: 20px;
+    }
+}
+@media (min-width: 400px) and (max-width:768px){
+
+    .inputContainer{
+        margin-top: 20px;
+    }
+    #canvasContainer{
+        height: 100px;
+        width: 450px;
+    }
+    #paint{
+        margin-top: 100px;
+        position: relative;
+        right: 100px;
+        height: 475px;
+        width: 650px;
+        
+        /* margin-right: 100px; */
+    }
+    #buttonContainer{
+        position: relative;
+        top: 500px;
+        right: 20px;
+    }
+
+
+}
